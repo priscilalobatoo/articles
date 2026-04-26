@@ -1,0 +1,38 @@
+# ==============================================================================
+# Commands to reproduce the article workflow
+# ===============================================================================
+
+# ------------------------------------------------------------------------------
+# 1) Main bibliometric pipeline - user-specific Windows context
+# ------------------------------------------------------------------------------
+setwd("C:/Users/elenp/Downloads/publication_ready_pipeline")
+getwd()
+source("00_run_pipeline.R")
+
+# ------------------------------------------------------------------------------
+# 2) Main bibliometric pipeline - generic context
+# ------------------------------------------------------------------------------
+setwd("C:/home/user/publication_ready_pipeline")
+getwd()
+source("00_run_pipeline.R")
+
+# ------------------------------------------------------------------------------
+# 3) ProKnow-C and technical synthesis - user-specific Windows context
+# ------------------------------------------------------------------------------
+setwd("C:/Users/elenp/Downloads/publication_ready_pipeline/proknowc/proknowc_analysis")
+getwd()
+source("00_run_proknowc_analysis.R")
+
+# ------------------------------------------------------------------------------
+# 4) ProKnow-C and technical synthesis - generic context
+# ------------------------------------------------------------------------------
+setwd("C:/home/user/publication_ready_pipeline/proknowc/proknowc_analysis")
+getwd()
+source("00_run_proknowc_analysis.R")
+
+# ------------------------------------------------------------------------------
+# 5) Optional: run ProKnow-C analysis scripts manually
+# ------------------------------------------------------------------------------
+source("../00_proknowc.R")
+source("01_generate_technical_comparison_table.R")
+source("02_generate_architecture_taxonomy_table.R")
